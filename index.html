@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            position: absolute;
+            background  : url('bg1.jpg') no-repeat center fixed;
+            background-size : cover;
+        }
+          
+        .login
+          {
+              position:absolute;
+              left: 30%; 
+              top: 80%;
+              width: 100%;
+              height: 40%;
+              /* opacity: 0.5; */
+          }
+        @font-face 
+        {
+    font-family: 'peaches_and_creamregular';
+    src: url("Peaches and Cream Regular.otf");
+        }
+        #lg1
+        {
+            padding-right: 0%;
+            padding-top: 50%;
+        }
+        input{
+            width: 150%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border-radius: 20px;
+            border: .5px solid black;
+            border-color: gray;
+            font-family: 'Monda', sans-serif;
+        }
+        #sub
+        {
+           background-color: rgb(41, 207, 41);
+           color: white;
+           width: 50%;
+           padding: 10px 15px;
+           margin: 0px 0;
+           border: none;
+           border-radius: 18px;
+           font-family: 'Monda', sans-serif;
+           cursor: pointer;
+
+        }
+        #sub1
+        {
+            background-color: dodgerblue;
+           color: white;
+           width: 50%;
+           padding: 10px 15px;
+           margin: 0px 0;
+           border: none;
+           border-radius: 18px;
+           font-family: 'Monda', sans-serif;
+           cursor: pointer;
+        }
+        .lefts
+        {
+            font-family: 'peaches_and_creamregular';
+	float: left;
+	font-size: 70px;
+	color: rgb(255, 255, 255);
+    font-weight: 400;
+	margin: 0px 20px;
+        }
+        @media only screen and (max-width:500px) {
+  .ab1{
+    width: 100%;
+  }
+  .login
+  {
+      position: relative;
+      left: 0%;
+  }
+}
+/* ************************ */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+        </style>
+    </head>
+    <body>
+            <div class="lefts">MealBox</div>
+            <div class="login">
+                <form id="lg1" onsubmit="clik()">
+                    <input type="text" placeholder="Enter your name"><br>
+                    <br>
+                    <input type="email" placeholder="Enter your e-mail"><br>
+                    <br>
+                    <input id="pwd" type="password" placeholder="Enter your password"><br>
+                    <br>
+                    <button type="submit" id="sub">submit</button><br><br><br>
+                    <a id="signup"href="signup.html">Not a User? Sign up</a><br><br>
+                    <a href="facebook.com" class="fa fa-facebook"></a>
+                    <a href="snapchat.com" class="fa fa-snapchat-ghost"></a>
+                    <a href="instagram.com" class="fa fa-instagram"></a>
+                </form>
+        </div>
+    <script>
+       function clik()
+        {
+        var pd1=document.getElementById('pwd').value;
+        var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+                   if(pd1=="")
+                   {
+                       alert('Password cannot be empty!');
+                   }
+                   else if(pd1.match(passw)) 
+                      { 
+                      alert('Correct Password')
+                      return true;
+                      }
+                      else{
+                          alert('Password pattern is wrong');
+                          return false;
+                      }
+        }             
+    </script>
+    </body>
+</html>
